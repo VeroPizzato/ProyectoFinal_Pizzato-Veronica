@@ -1,0 +1,42 @@
+/* HEADER */
+#arriba{
+    .navbar {   
+        background-image: $gradiente-navbar;  
+        width: 100%;
+        left: 0;
+        top: 0;
+        right: 0;  
+        min-height: 15vh;        
+        .ancho-max {
+            max-width: 850px;
+            .imagen-nav{
+                img {   
+                    height: 12vh;
+                }
+            }
+            .collapse{       
+                flex-direction: row-reverse;              
+                .navbar-nav{
+                    .nav-item{
+                        a{
+                            text-decoration: none;
+                            color: $color-texto !important;   
+                            font-size: 18px;
+                            &:hover{
+                                color: $color-principal !important;
+                                background-color: transparent;
+                                font-weight: bold;
+                            }                        
+                        } 
+                        .typo-menu{
+                            font-family: $tipo-menu;
+                        }                                     
+                        .dropdown-menu {                    
+                            background-image: $gradiente-navbar;  
+                        }        
+                    }                      
+                }                     
+            }
+        }       
+    } 
+}

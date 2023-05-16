@@ -1,0 +1,365 @@
+/* Tipografia externa */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+/* MIXIN */
+/* EXTEND */
+.flex-seccion-grid, .fondo-tienda .tienda .grid-area-tienda .seccion-1, .fondo-tienda .tienda .grid-area-tienda .seccion-2, .fondo-tienda .tienda .grid-area-tienda .seccion-3, .fondo-tienda .tienda .grid-area-tienda .seccion-4, .fondo-tienda .tienda .grid-area-tienda .seccion-5, .fondo-tienda .tienda .grid-area-tienda .seccion-6 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap; }
+
+.estilos-form-contacto, .img-fondo .form-contacto .dato-form #nombre-form, .img-fondo .form-contacto .dato-form #tel-form, .img-fondo .form-contacto .dato-form #mail-form, .img-fondo .form-contacto .dato-form #comentarios-form, .img-fondo .form-contacto #boton-form {
+  padding: 5px;
+  margin: 10px;
+  width: 340px;
+  border-radius: 10px;
+  border: 2px solid black; }
+
+.typo-contenido, h1, p, .img-fondo-principal .titulos-inicio h4, .fondo-cervezas .articulo__titulo, .fondo-tienda .tienda .grid-area-tienda .seccion .cambio-typo, .fondo-tienda .tienda .presentacion h3, .img-fondo .cambio-typo {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  color: white; }
+
+.sobreado-focus, .img-fondo .form-contacto .dato-form #nombre-form:focus, .img-fondo .form-contacto .dato-form #tel-form:focus, .img-fondo .form-contacto .dato-form #mail-form:focus, .img-fondo .form-contacto .dato-form #comentarios-form:focus {
+  box-shadow: inset 0 0 10px brown; }
+
+/* Reseteo */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* HEADER */
+#arriba .navbar {
+  background-image: linear-gradient(to right, #2f2e2e, #474747);
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  min-height: 15vh; }
+  #arriba .navbar .ancho-max {
+    max-width: 850px; }
+    #arriba .navbar .ancho-max .imagen-nav img {
+      height: 12vh; }
+    #arriba .navbar .ancho-max .collapse {
+      flex-direction: row-reverse; }
+      #arriba .navbar .ancho-max .collapse .navbar-nav .nav-item a {
+        text-decoration: none;
+        color: white !important;
+        font-size: 18px; }
+        #arriba .navbar .ancho-max .collapse .navbar-nav .nav-item a:hover {
+          color: brown !important;
+          background-color: transparent;
+          font-weight: bold; }
+      #arriba .navbar .ancho-max .collapse .navbar-nav .nav-item .typo-menu {
+        font-family: "Roboto Slab", serif; }
+      #arriba .navbar .ancho-max .collapse .navbar-nav .nav-item .dropdown-menu {
+        background-image: linear-gradient(to right, #2f2e2e, #474747); }
+
+/* MAIN */
+ul {
+  list-style-type: none; }
+
+h1 {
+  padding: 30px;
+  animation-name: aparicion-titulo;
+  animation-iteration-count: 1;
+  animation-duration: 2s; }
+
+p {
+  font-size: 20px;
+  max-width: 900px; }
+
+/* Inicio */
+.img-fondo-principal {
+  background-image: url("https://maltosaa.com.mx/wp-content/uploads/craft-beer-north-island-1400x770.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 80vh; }
+  .img-fondo-principal .titulos-inicio {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: baseline;
+    align-items: center;
+    align-content: space-between;
+    max-width: 500px; }
+    .img-fondo-principal .titulos-inicio h1 {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 3rem;
+      margin-left: 20px; }
+    .img-fondo-principal .titulos-inicio h4 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 30px;
+      animation-name: parrafo-agrandar;
+      animation-iteration-count: 1;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      margin-left: 20px; }
+    .img-fondo-principal .titulos-inicio p {
+      text-align: center;
+      margin-top: 50px;
+      margin-left: 20px; }
+
+/* Estilos de Cerveza */
+.fondo-cervezas {
+  background-color: #504f4f;
+  padding: 15px;
+  min-height: 80vh; }
+  .fondo-cervezas .articulo .cervezas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 50px;
+    border: 5px solid orangered;
+    box-shadow: 0 0 20px orange; }
+    .fondo-cervezas .articulo .cervezas .articulo__img {
+      width: 355px;
+      overflow: hidden; }
+      .fondo-cervezas .articulo .cervezas .articulo__img:hover {
+        filter: blur(2px); }
+      .fondo-cervezas .articulo .cervezas .articulo__img--md {
+        border-radius: 15px;
+        box-shadow: 0 0 15px black;
+        margin-top: 10px;
+        margin-bottom: 10px; }
+
+/* Tienda */
+.fondo-tienda {
+  background-color: #504f4f;
+  padding: 5px;
+  min-height: 80vh;
+  /* ----- Grid Area ----- */ }
+  .fondo-tienda p {
+    margin-bottom: 30px; }
+  .fondo-tienda .tienda {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .fondo-tienda .tienda .grid-area-tienda {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "seccion1 seccion2 seccion3 " "seccion4 seccion5 seccion6";
+      margin: 20px auto;
+      width: 1200px;
+      height: 900px;
+      background-color: #736f6f;
+      box-shadow: 0 0 20px black; }
+      .fondo-tienda .tienda .grid-area-tienda .seccion {
+        margin: 20px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: 0.5s; }
+        .fondo-tienda .tienda .grid-area-tienda .seccion:hover {
+          transform: scale(1.1); }
+        .fondo-tienda .tienda .grid-area-tienda .seccion .cambio-typo {
+          text-align: left;
+          text-shadow: 1px 1px 2px black; }
+        .fondo-tienda .tienda .grid-area-tienda .seccion .tachado {
+          text-decoration: line-through; }
+        .fondo-tienda .tienda .grid-area-tienda .seccion select {
+          color: black;
+          text-shadow: 1px 1px 2px black; }
+        .fondo-tienda .tienda .grid-area-tienda .seccion option {
+          color: black;
+          font-weight: bold;
+          background-color: #9e9c9c; }
+        .fondo-tienda .tienda .grid-area-tienda .seccion .boton-comprar {
+          background-color: #504f4f;
+          color: white;
+          border: 2px solid black;
+          padding: 4px;
+          transition: 1s; }
+          .fondo-tienda .tienda .grid-area-tienda .seccion .boton-comprar:hover {
+            background-color: orange;
+            color: black;
+            font-weight: bold;
+            transform: scale(1.09);
+            transition: 1s;
+            border-radius: 15px; }
+      .fondo-tienda .tienda .grid-area-tienda .seccion-1 {
+        grid-area: seccion1; }
+      .fondo-tienda .tienda .grid-area-tienda .seccion-2 {
+        grid-area: seccion2; }
+      .fondo-tienda .tienda .grid-area-tienda .seccion-3 {
+        grid-area: seccion3; }
+      .fondo-tienda .tienda .grid-area-tienda .seccion-4 {
+        grid-area: seccion4; }
+      .fondo-tienda .tienda .grid-area-tienda .seccion-5 {
+        grid-area: seccion5; }
+      .fondo-tienda .tienda .grid-area-tienda .seccion-6 {
+        grid-area: seccion6; }
+    .fondo-tienda .tienda .presentacion {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px;
+      padding: 15px;
+      margin-top: 40px; }
+      .fondo-tienda .tienda .presentacion .video-fabrica {
+        margin-top: 25px;
+        margin-bottom: 20px; }
+        .fondo-tienda .tienda .presentacion .video-fabrica video {
+          height: 350px;
+          width: 350px;
+          border-radius: 15px; }
+
+/* Nosostros */
+.img-fondo-nosotros {
+  background-image: url("https://media.istockphoto.com/id/1409888226/es/foto/botella-de-cerveza-con-gotas-de-agua-sobre-mesa-de-madera-brillante-de-fondo-bokeh-concepto.jpg?s=612x612&w=0&k=20&c=kCrOgV6stLrFSFMNVZiaw2F1XlNwOHOMPs2VcyLiBqg=");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 80vh; }
+  .img-fondo-nosotros .contenido-nosotros {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+    .img-fondo-nosotros .contenido-nosotros .fondo-texto {
+      box-shadow: 0 0 15px black;
+      background-color: #cab38534;
+      border-radius: 0.3rem;
+      margin: 30px;
+      padding: 20px; }
+    .img-fondo-nosotros .contenido-nosotros .nosotros {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin-top: 10px; }
+      .img-fondo-nosotros .contenido-nosotros .nosotros .imagen-contacto {
+        width: 285px;
+        height: 250px;
+        overflow: hidden;
+        box-shadow: 0 0 15px black;
+        border: #cab38534 solid 8px;
+        border-radius: 0.3rem; }
+      .img-fondo-nosotros .contenido-nosotros .nosotros p {
+        background: orange;
+        color: black;
+        font-weight: bold; }
+        .img-fondo-nosotros .contenido-nosotros .nosotros p:hover {
+          font-weight: bold;
+          background: brown; }
+
+/* Contacto */
+.img-fondo {
+  background-color: #504f4f;
+  background-image: url("https://www.losvinos.com.ar/wp-content/uploads/2019/09/tipos-Cerveza-Artesanal-1024x683.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  min-height: 80vh; }
+  .img-fondo .cambio-typo {
+    text-align: left;
+    padding-left: 60px;
+    margin-left: 60px; }
+  .img-fondo .form-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 15px;
+    margin-left: 15px;
+    flex-wrap: wrap;
+    border: #cab38534 solid 8px;
+    border-radius: 15px;
+    background-color: #f3dab527;
+    width: 500px; }
+    .img-fondo .form-contacto .dato-form {
+      display: flex;
+      align-items: center; }
+      .img-fondo .form-contacto .dato-form .texto-form {
+        color: white;
+        text-shadow: 1px 1px 2px black; }
+    .img-fondo .form-contacto #boton-form {
+      background-color: #736f6f;
+      color: black;
+      border: 2px solid black;
+      padding: 4px;
+      transition: 1s; }
+      .img-fondo .form-contacto #boton-form:hover {
+        background-color: brown;
+        color: white;
+        transform: scale(1.09);
+        transition: 1s;
+        border-radius: 15px; }
+
+/* FOOTER */
+.footer {
+  margin: 0 auto;
+  min-height: 5vh;
+  display: flex;
+  background-color: #363434;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .footer img {
+    width: 30px;
+    margin: 0px 10px; }
+
+@keyframes aparicion-titulo {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes parrafo-agrandar {
+  0% {
+    transform: scale(0.4); }
+  50% {
+    transform: scale(0.7); }
+  100% {
+    transform: scale(1); } }
+
+/* RESPONSIVE MEDIA QUERY - Estilos para mobile */
+@media (min-width: 675px) and (max-width: 1200px) {
+  .fondo-tienda .grid-area-tienda {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 800px;
+    height: auto;
+    grid-template-areas: "seccion1 seccion2" "seccion3 seccion4" "seccion5 seccion6"; }
+  .titulos-inicio h1 {
+    font-size: 40px; }
+  .titulos-inicio h4 {
+    font-size: 30px; }
+  .titulos-inicio p {
+    font-size: 18px; } }
+
+@media (max-width: 674px) {
+  .fondo-tienda .grid-area-tienda {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 400px;
+    height: auto;
+    grid-template-areas: "seccion1" "seccion2" "seccion3" "seccion4" "seccion5" "seccion6"; }
+  .form-contacto #mail-form {
+    width: 300px !important; }
+  .form-contacto #nombre-form {
+    width: 300px !important; }
+  .form-contacto #tel-form {
+    width: 300px !important; }
+  .form-contacto #mail-form {
+    width: 300px !important; }
+  .form-contacto #comentarios-form {
+    width: 300px !important; }
+  .form-contacto #boton-form {
+    width: 300px !important; }
+  .titulos-inicio h1 {
+    font-size: 38px; }
+  .titulos-inicio h4 {
+    font-size: 22px; }
+  .titulos-inicio p {
+    font-size: 16px;
+    font-weight: bold; } }

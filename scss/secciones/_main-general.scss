@@ -1,0 +1,370 @@
+/* MAIN */
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    @extend .typo-contenido;
+    padding: 30px;
+    animation-name: aparicion-titulo;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+p {
+    @extend .typo-contenido;
+    font-size: 20px;
+    max-width: 900px;   
+}
+
+/* Inicio */
+.img-fondo-principal {
+    background-image: url('https://maltosaa.com.mx/wp-content/uploads/craft-beer-north-island-1400x770.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    // background-position: 50% 0;
+    background-size: cover;
+    min-height: 80vh;
+
+    .titulos-inicio {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: $color-texto;
+        justify-content: baseline;
+        align-items: center;
+        align-content: space-between;
+        max-width: 500px;
+
+        h1 {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 3rem;
+            margin-left: 20px;
+        }
+
+        h4 {
+            @extend .typo-contenido;
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 30px;
+            animation-name: parrafo-agrandar;
+            animation-iteration-count: 1;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            margin-left: 20px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+    }
+}
+
+/* Estilos de Cerveza */
+.fondo-cervezas {
+    background-color: $color-fondo;
+    padding: 15px;
+    min-height: 80vh;
+
+    .articulo {
+        &__titulo {
+            @extend .typo-contenido;
+        }
+
+        .cervezas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: stretch;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-bottom: 50px;
+            border: 5px solid $color-secundario;
+            box-shadow: 0 0 20px orange;
+
+            .articulo__img {
+                &:hover {
+                    filter: blur(2.0px);
+                }
+
+                width: 355px;               
+                overflow: hidden;
+
+                &--md {
+                    border-radius: 15px;
+                    box-shadow: 0 0 15px black;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* Tienda */
+.fondo-tienda {
+    background-color: $color-fondo;
+    padding: 5px;
+    min-height: 80vh;
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    /* ----- Grid Area ----- */
+    .tienda{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .grid-area-tienda {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas:
+                "seccion1 seccion2 seccion3 "
+                "seccion4 seccion5 seccion6"
+            ;
+            margin: 20px auto;
+            width: 1200px;
+            height: 900px;
+            background-color: rgb(115, 111, 111);
+            box-shadow: 0 0 20px black;
+    
+            .seccion {
+                margin: 20px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                transition: 0.5s;
+    
+                &:hover {
+                    transform: scale(1.1);
+                }
+    
+                .cambio-typo {
+                    @extend .typo-contenido;
+                    text-align: left;
+                    text-shadow: 1px 1px 2px black;  
+                }
+    
+                .tachado {
+                    text-decoration: line-through;
+                }
+    
+                select { 
+                    color:black; 
+                    text-shadow: 1px 1px 2px black; 
+                }
+                option { 
+                    color:black;
+                    font-weight: bold;
+                    background-color: rgb(158, 156, 156);                                          
+                }                
+                
+                .boton-comprar {
+                    @include color-boton(#504f4f, $color-texto);
+    
+                    &:hover {
+                        background-color: orange;
+                        color: black;
+                        font-weight: bold;
+                        transform: scale(1.09);
+                        transition: 1s;
+                        border-radius: 15px;
+                    }
+                }
+            }
+    
+            .seccion-1 {
+                grid-area: seccion1;
+                @extend .flex-seccion-grid;
+            }
+    
+            .seccion-2 {
+                grid-area: seccion2;
+                @extend .flex-seccion-grid;
+            }
+    
+            .seccion-3 {
+                grid-area: seccion3;
+                @extend .flex-seccion-grid;
+            }
+    
+            .seccion-4 {
+                grid-area: seccion4;
+                @extend .flex-seccion-grid;
+            }
+    
+            .seccion-5 {
+                grid-area: seccion5;
+                @extend .flex-seccion-grid;
+            }
+    
+            .seccion-6 {
+                grid-area: seccion6;
+                @extend .flex-seccion-grid;
+            }
+        }
+    
+        .presentacion {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px;
+            padding: 15px;
+            margin-top: 40px;
+              
+            h3 {
+                @extend .typo-contenido;
+            }
+    
+            .video-fabrica {
+                margin-top: 25px;
+                margin-bottom: 20px;
+    
+                video {
+                    height: 350px;
+                    width: 350px;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }    
+}
+
+/* Nosostros */
+.img-fondo-nosotros {
+    background-image: url('https://media.istockphoto.com/id/1409888226/es/foto/botella-de-cerveza-con-gotas-de-agua-sobre-mesa-de-madera-brillante-de-fondo-bokeh-concepto.jpg?s=612x612&w=0&k=20&c=kCrOgV6stLrFSFMNVZiaw2F1XlNwOHOMPs2VcyLiBqg=');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 80vh;
+
+    .contenido-nosotros{
+        display: flex;
+        justify-content: space-evenly;        
+        flex-wrap: wrap;
+        .fondo-texto{    
+            box-shadow: 0 0 15px black;         
+            background-color: #cab38534;            
+            border-radius: 0.3rem;        
+            margin: 30px;
+            padding: 20px;
+        }
+        .nosotros {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;           
+            flex-direction: column;
+            margin-top: 10px;            
+            
+            .imagen-contacto {
+                width: 285px;
+                height: 250px;
+                overflow: hidden; 
+                box-shadow: 0 0 15px black;    
+                border: #cab38534 solid 8px;  
+                border-radius: 0.3rem;           
+            }
+    
+            p {
+                background: orange;
+                color: black;
+                font-weight: bold;
+    
+                &:hover {
+                    font-weight: bold;
+                    background: $color-principal;
+                }
+            }
+        }
+    }    
+}
+
+/* Contacto */
+.img-fondo {
+    background-color: $color-fondo;
+    background-image: url('https://www.losvinos.com.ar/wp-content/uploads/2019/09/tipos-Cerveza-Artesanal-1024x683.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    min-height: 80vh;
+
+    .cambio-typo {
+        @extend .typo-contenido;
+        text-align: left;
+        padding-left: 60px;
+        margin-left: 60px;
+    }
+
+    .form-contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-left: 15px;
+        margin-left: 15px;       
+        flex-wrap: wrap;
+        border: #cab38534 solid 8px;
+        border-radius: 15px;
+        background-color: #f3dab527;
+        width:500px;         
+        .dato-form {
+            display: flex;
+            align-items: center;
+
+            .texto-form {
+                color: $color-texto;   
+                text-shadow: 1px 1px 2px black;                        
+            }
+
+            #nombre-form {
+                @extend .estilos-form-contacto;
+
+                &:focus {
+                    @extend .sobreado-focus;
+                }
+            }
+
+            #tel-form {
+                @extend .estilos-form-contacto;
+
+                &:focus {
+                    @extend .sobreado-focus;
+                }
+            }
+
+            #mail-form {
+                @extend .estilos-form-contacto;
+
+                &:focus {
+                    @extend .sobreado-focus;
+                }
+            }
+
+            #comentarios-form {
+                @extend .estilos-form-contacto;
+
+                &:focus {
+                    @extend .sobreado-focus;
+                }
+            }
+        }
+
+        #boton-form {
+            @include color-boton(rgb(115, 111, 111), black);
+            @extend .estilos-form-contacto;
+
+            &:hover {
+                background-color: $color-principal;
+                color: $color-texto;
+                transform: scale(1.09);
+                transition: 1s;
+                border-radius: 15px;
+            }
+        }
+    }
+}
