@@ -1,31 +1,53 @@
 /* RESPONSIVE MEDIA QUERY - Estilos para mobile */
-@media (min-width: 675px) and (max-width: 1200px){ 
-    .fondo-tienda .grid-area-tienda{
+@media (min-width: 675px) and (max-width: 1200px){  
+    .fondo-tienda .tienda .grid-area-tienda{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);  
-        width: 800px;  
+        width: 655px;  
         height: auto;    
         grid-template-areas:
         "seccion1 seccion2"
         "seccion3 seccion4"
         "seccion5 seccion6"
-        ;             
+        ;  
+        .seccion .imgTienda{
+            max-width: 250px;            
+        }    
+        .seccion .cambio-typo{
+            font-size:18px;
+        }      
     }  
+    .img-fondo-contacto .form-contacto{
+        width: 450px !important;       
+        #nombre-form{
+            width: 300px !important;
+        }
+        #tel-form{
+            width: 300px !important;
+        }
+        #mail-form{
+            width: 300px !important;
+        }
+        #comentarios-form{
+            width: 300px !important;
+        }
+        #boton-form{
+            width: 300px !important;
+        }  
+    }   
     .titulos-inicio h1 {          
-        font-size: 40px;       
-    }
-    
+        font-size: 40px;         
+    }    
     .titulos-inicio h4 {       
-        font-size: 30px;     
-    }
-    
+        font-size: 30px;         
+    }    
     .titulos-inicio p {
-        font-size: 18px; 
+        font-size: 18px;         
     }  
 }
 
-@media (max-width: 674px) {
-    .fondo-tienda .grid-area-tienda{
+@media (min-width: 412px) and (max-width: 674px){ 
+    .fondo-tienda .tienda .grid-area-tienda{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, 1fr);   
         width: 400px;   
@@ -39,42 +61,88 @@
         "seccion6"
         ;             
     }   
-
-    .form-contacto #mail-form{
-        width: 300px !important;
-    }
-
-    .form-contacto #nombre-form{
-        width: 300px !important;
-    }
-
-    .form-contacto #tel-form{
-        width: 300px !important;
-    }
-
-    .form-contacto #mail-form{
-        width: 300px !important;
-    }
-
-    .form-contacto #comentarios-form{
-        width: 300px !important;
-    }
-
-    .form-contacto #boton-form{
-        width: 300px !important;
+    .img-fondo-contacto .form-contacto{
+        width: 385px !important;      
+        #nombre-form{
+            width: 250px !important;
+        }
+        #tel-form{
+            width: 250px !important;
+        }
+        #mail-form{
+            width: 250px !important;
+        }
+        #comentarios-form{
+            width: 250px !important;
+        }
+        #boton-form{
+            width: 250px !important;
+        }   
     }   
-   
     .titulos-inicio h1 {          
-        font-size: 38px;        
-    }
-    
+        font-size: 38px;                
+    }    
     .titulos-inicio h4 {       
-        font-size: 22px;  
-           
-    }
-    
+        font-size: 22px;                  
+    }    
     .titulos-inicio p {
-        font-size: 16px;  
-        font-weight: bold;         
-    }   
+        font-size: 16px;               
+    } 
+}  
+
+@media (min-width: 280px) and (max-width: 411px){ 
+    .fondo-tienda .tienda .grid-area-tienda{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);   
+        width: 260px;   
+        height: auto;       
+        grid-template-areas:
+        "seccion1"
+        "seccion2"
+        "seccion3"
+        "seccion4"
+        "seccion5"
+        "seccion6"
+        ; 
+        .seccion .imgTienda{
+            max-width: 220px;
+        }      
+        .seccion .cambio-typo{
+            font-size:16px;
+        }    
+        .seccion .combo{
+            font-size: 12px;
+        }   
+        .seccion .boton-comprar{
+            font-size: 12px;
+        }  
+    }  
+    .img-fondo-contacto .form-contacto{
+        width: 255px !important;       
+        #nombre-form{
+            width: 150px !important;
+        }    
+        #tel-form{
+            width: 150px !important;
+        }    
+        #mail-form{
+            width: 150px !important;
+        }    
+        #comentarios-form{
+            width: 150px !important;
+        }    
+        #boton-form{
+            width: 150px !important;
+        }   
+    }     
+    .titulos-inicio h1 {          
+        font-size: 28px;                
+    }    
+    .titulos-inicio h4 {       
+        font-size: 18px;                  
+    }    
+    .titulos-inicio p {
+        font-size: 14px;              
+    } 
 }
+

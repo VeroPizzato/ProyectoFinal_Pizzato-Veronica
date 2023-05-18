@@ -10,19 +10,19 @@
   align-content: center;
   flex-wrap: wrap; }
 
-.estilos-form-contacto, .img-fondo .form-contacto .dato-form #nombre-form, .img-fondo .form-contacto .dato-form #tel-form, .img-fondo .form-contacto .dato-form #mail-form, .img-fondo .form-contacto .dato-form #comentarios-form, .img-fondo .form-contacto #boton-form {
+.estilos-form-contacto, .img-fondo-contacto .form-contacto .dato-form #nombre-form, .img-fondo-contacto .form-contacto .dato-form #tel-form, .img-fondo-contacto .form-contacto .dato-form #mail-form, .img-fondo-contacto .form-contacto .dato-form #comentarios-form, .img-fondo-contacto .form-contacto #boton-form {
   padding: 5px;
   margin: 10px;
   width: 340px;
   border-radius: 10px;
   border: 2px solid black; }
 
-.typo-contenido, h1, p, .img-fondo-principal .titulos-inicio h4, .fondo-cervezas .articulo__titulo, .fondo-tienda .tienda .grid-area-tienda .seccion .cambio-typo, .fondo-tienda .tienda .presentacion h3, .img-fondo .cambio-typo {
+.typo-contenido, h1, p, .img-fondo-principal .titulos-inicio h4, .fondo-cervezas .articulo__titulo, .fondo-tienda .tienda .grid-area-tienda .seccion .cambio-typo, .fondo-tienda .tienda .presentacion h3, .img-fondo-contacto .cambio-typo {
   font-family: "Roboto Mono", monospace;
   text-align: center;
   color: white; }
 
-.sobreado-focus, .img-fondo .form-contacto .dato-form #nombre-form:focus, .img-fondo .form-contacto .dato-form #tel-form:focus, .img-fondo .form-contacto .dato-form #mail-form:focus, .img-fondo .form-contacto .dato-form #comentarios-form:focus {
+.sobreado-focus, .img-fondo-contacto .form-contacto .dato-form #nombre-form:focus, .img-fondo-contacto .form-contacto .dato-form #tel-form:focus, .img-fondo-contacto .form-contacto .dato-form #mail-form:focus, .img-fondo-contacto .form-contacto .dato-form #comentarios-form:focus {
   box-shadow: inset 0 0 10px brown; }
 
 /* Reseteo */
@@ -62,14 +62,16 @@ ul {
   list-style-type: none; }
 
 h1 {
-  padding: 30px;
+  padding: 20px;
   animation-name: aparicion-titulo;
   animation-iteration-count: 1;
-  animation-duration: 2s; }
+  animation-duration: 2s;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black; }
 
 p {
   font-size: 20px;
-  max-width: 900px; }
+  max-width: 900px;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black; }
 
 /* Inicio */
 .img-fondo-principal {
@@ -100,7 +102,8 @@ p {
       animation-iteration-count: 1;
       animation-duration: 5s;
       animation-timing-function: linear;
-      margin-left: 20px; }
+      margin-left: 20px;
+      text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black; }
     .img-fondo-principal .titulos-inicio p {
       text-align: center;
       margin-top: 50px;
@@ -254,18 +257,18 @@ p {
           background: brown; }
 
 /* Contacto */
-.img-fondo {
+.img-fondo-contacto {
   background-color: #504f4f;
   background-image: url("https://www.losvinos.com.ar/wp-content/uploads/2019/09/tipos-Cerveza-Artesanal-1024x683.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
   min-height: 80vh; }
-  .img-fondo .cambio-typo {
+  .img-fondo-contacto .cambio-typo {
     text-align: left;
     padding-left: 60px;
     margin-left: 60px; }
-  .img-fondo .form-contacto {
+  .img-fondo-contacto .form-contacto {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -276,19 +279,19 @@ p {
     border-radius: 15px;
     background-color: #f3dab527;
     width: 500px; }
-    .img-fondo .form-contacto .dato-form {
+    .img-fondo-contacto .form-contacto .dato-form {
       display: flex;
       align-items: center; }
-      .img-fondo .form-contacto .dato-form .texto-form {
+      .img-fondo-contacto .form-contacto .dato-form .texto-form {
         color: white;
         text-shadow: 1px 1px 2px black; }
-    .img-fondo .form-contacto #boton-form {
+    .img-fondo-contacto .form-contacto #boton-form {
       background-color: #736f6f;
       color: black;
       border: 2px solid black;
       padding: 4px;
       transition: 1s; }
-      .img-fondo .form-contacto #boton-form:hover {
+      .img-fondo-contacto .form-contacto #boton-form:hover {
         background-color: brown;
         color: white;
         transform: scale(1.09);
@@ -324,12 +327,28 @@ p {
 
 /* RESPONSIVE MEDIA QUERY - Estilos para mobile */
 @media (min-width: 675px) and (max-width: 1200px) {
-  .fondo-tienda .grid-area-tienda {
+  .fondo-tienda .tienda .grid-area-tienda {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    width: 800px;
+    width: 655px;
     height: auto;
     grid-template-areas: "seccion1 seccion2" "seccion3 seccion4" "seccion5 seccion6"; }
+    .fondo-tienda .tienda .grid-area-tienda .seccion .imgTienda {
+      max-width: 250px; }
+    .fondo-tienda .tienda .grid-area-tienda .seccion .cambio-typo {
+      font-size: 18px; }
+  .img-fondo-contacto .form-contacto {
+    width: 450px !important; }
+    .img-fondo-contacto .form-contacto #nombre-form {
+      width: 300px !important; }
+    .img-fondo-contacto .form-contacto #tel-form {
+      width: 300px !important; }
+    .img-fondo-contacto .form-contacto #mail-form {
+      width: 300px !important; }
+    .img-fondo-contacto .form-contacto #comentarios-form {
+      width: 300px !important; }
+    .img-fondo-contacto .form-contacto #boton-form {
+      width: 300px !important; }
   .titulos-inicio h1 {
     font-size: 40px; }
   .titulos-inicio h4 {
@@ -337,29 +356,62 @@ p {
   .titulos-inicio p {
     font-size: 18px; } }
 
-@media (max-width: 674px) {
-  .fondo-tienda .grid-area-tienda {
+@media (min-width: 412px) and (max-width: 674px) {
+  .fondo-tienda .tienda .grid-area-tienda {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
     width: 400px;
     height: auto;
     grid-template-areas: "seccion1" "seccion2" "seccion3" "seccion4" "seccion5" "seccion6"; }
-  .form-contacto #mail-form {
-    width: 300px !important; }
-  .form-contacto #nombre-form {
-    width: 300px !important; }
-  .form-contacto #tel-form {
-    width: 300px !important; }
-  .form-contacto #mail-form {
-    width: 300px !important; }
-  .form-contacto #comentarios-form {
-    width: 300px !important; }
-  .form-contacto #boton-form {
-    width: 300px !important; }
+  .img-fondo-contacto .form-contacto {
+    width: 385px !important; }
+    .img-fondo-contacto .form-contacto #nombre-form {
+      width: 250px !important; }
+    .img-fondo-contacto .form-contacto #tel-form {
+      width: 250px !important; }
+    .img-fondo-contacto .form-contacto #mail-form {
+      width: 250px !important; }
+    .img-fondo-contacto .form-contacto #comentarios-form {
+      width: 250px !important; }
+    .img-fondo-contacto .form-contacto #boton-form {
+      width: 250px !important; }
   .titulos-inicio h1 {
     font-size: 38px; }
   .titulos-inicio h4 {
     font-size: 22px; }
   .titulos-inicio p {
-    font-size: 16px;
-    font-weight: bold; } }
+    font-size: 16px; } }
+
+@media (min-width: 280px) and (max-width: 411px) {
+  .fondo-tienda .tienda .grid-area-tienda {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 260px;
+    height: auto;
+    grid-template-areas: "seccion1" "seccion2" "seccion3" "seccion4" "seccion5" "seccion6"; }
+    .fondo-tienda .tienda .grid-area-tienda .seccion .imgTienda {
+      max-width: 220px; }
+    .fondo-tienda .tienda .grid-area-tienda .seccion .cambio-typo {
+      font-size: 16px; }
+    .fondo-tienda .tienda .grid-area-tienda .seccion .combo {
+      font-size: 12px; }
+    .fondo-tienda .tienda .grid-area-tienda .seccion .boton-comprar {
+      font-size: 12px; }
+  .img-fondo-contacto .form-contacto {
+    width: 255px !important; }
+    .img-fondo-contacto .form-contacto #nombre-form {
+      width: 150px !important; }
+    .img-fondo-contacto .form-contacto #tel-form {
+      width: 150px !important; }
+    .img-fondo-contacto .form-contacto #mail-form {
+      width: 150px !important; }
+    .img-fondo-contacto .form-contacto #comentarios-form {
+      width: 150px !important; }
+    .img-fondo-contacto .form-contacto #boton-form {
+      width: 150px !important; }
+  .titulos-inicio h1 {
+    font-size: 28px; }
+  .titulos-inicio h4 {
+    font-size: 18px; }
+  .titulos-inicio p {
+    font-size: 14px; } }
