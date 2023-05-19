@@ -1,14 +1,20 @@
 /* FOOTER */
-.footer {
-    margin: 0 auto; 
-    min-height: 5vh;
+.footer {  
+    min-height: 10vh;
     display: flex;    
-    background-color: rgb(54, 52, 52);
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    img{
-        width: 30px;
-        margin: 0px 10px;
-    }
+    background-color: rgb(54, 52, 52);   
+    align-items: center;   
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    width: 100%;   
+    .iconos a{        
+        color: brown;
+        font-size: 30px;
+        margin: 10px;         
+        padding: 12px 20px;              
+    }    
+    .iconos a:hover {
+        color: white;
+        font-size: 40px;
+    }    
 }
