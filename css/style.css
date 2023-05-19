@@ -373,9 +373,9 @@ p {
     font-size: 30px;
     margin: 10px;
     padding: 12px 20px; }
-  .footer .iconos a:hover {
-    color: white;
-    font-size: 40px; }
+    .footer .iconos a:hover {
+      color: white;
+      font-size: 40px; }
 
 @keyframes aparicion-titulo {
   0% {
