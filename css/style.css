@@ -119,56 +119,17 @@ p {
     border: 5px solid orangered;
     box-shadow: 0 0 20px orange;
     margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 20px; }
-    .pagina-inicio .banner .carousel-inner .carousel-item .slide1 {
-      height: 408px;
-      background-image: url("/recursos/inicio/imagen1.jpg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .pagina-inicio .banner .carousel-inner .carousel-item .slide2 {
-      height: 408px;
-      background-image: url("/recursos/inicio/imagen2.jpg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .pagina-inicio .banner .carousel-inner .carousel-item .slide3 {
-      height: 408px;
-      background-image: url("/recursos/inicio/imagen3.jpg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .pagina-inicio .banner .carousel-inner .carousel-item .slide4 {
-      height: 408px;
-      background-image: url("/recursos/inicio/imagen4.jpg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .pagina-inicio .banner .carousel-inner .carousel-item .slide5 {
-      height: 408px;
-      background-image: url("/recursos/inicio/imagen5.jpg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .pagina-inicio .banner .carousel-inner .carousel-item .slide6 {
-      height: 408px;
-      background-image: url("/recursos/inicio/imagen6.jpg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .pagina-inicio .banner .carousel-inner .carousel-item .slide7 {
-      height: 408px;
-      background-image: url("/recursos/inicio/imagen7.jpg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .pagina-inicio .banner .carousel-inner .carousel-item .slide8 {
-      height: 408px;
-      background-image: url("/recursos/inicio/imagen8.jpg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center; }
+    margin-right: auto;
+    margin-left: auto;
+    width: 960px;
+    height: 500px; }
+    .pagina-inicio .banner .carousel-inner {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 125px;
+      padding-right: 125px; }
+      .pagina-inicio .banner .carousel-inner .carousel-item {
+        height: 408px; }
 
 /* Estilos de Cerveza */
 .fondo-cervezas {

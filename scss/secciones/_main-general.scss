@@ -24,7 +24,7 @@ p {
 /* Inicio */
 .pagina-inicio{
     min-height: 75vh;
-    background-color: $color-fondo; 
+    background-color: $color-fondo;     
     .img-fondo-principal {        
         background-image: url('https://maltosaa.com.mx/wp-content/uploads/craft-beer-north-island-1400x770.jpg');
         background-repeat: no-repeat;
@@ -65,72 +65,24 @@ p {
             }
         }
     }
-    .banner{
-        background-color: $color-fondo;
+    .banner{           
+        background-color: $color-fondo;       
         min-height: 25vh; 
         border: 5px solid $color-secundario;
         box-shadow: 0 0 20px orange; 
-        margin-top: 20px; 
-        margin-right: 20px;
-        margin-left: 20px; 
-        .carousel-inner{                   
-            .carousel-item {            
-                .slide1{
-                    height: 408px;
-                    background-image: url('/recursos/inicio/imagen1.jpg');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-                .slide2{
-                    height: 408px;
-                    background-image: url('/recursos/inicio/imagen2.jpg');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-                .slide3{
-                    height: 408px;
-                    background-image: url('/recursos/inicio/imagen3.jpg');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-                .slide4{
-                    height: 408px;
-                    background-image: url('/recursos/inicio/imagen4.jpg');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-                .slide5{
-                    height: 408px;
-                    background-image: url('/recursos/inicio/imagen5.jpg');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-                .slide6{
-                    height: 408px;
-                    background-image: url('/recursos/inicio/imagen6.jpg');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-                .slide7{
-                    height: 408px;
-                    background-image: url('/recursos/inicio/imagen7.jpg');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-                .slide8{
-                    height: 408px;
-                    background-image: url('/recursos/inicio/imagen8.jpg');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
+        margin-top: 20px;        
+        margin-right: auto;
+        margin-left: auto;    
+        // margin-bottom: 20px;   
+        width: 960px;
+        height: 500px;   
+        .carousel-inner{                           
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 125px;
+            padding-right: 125px;                            
+            .carousel-item {                     
+                height: 408px; 
             }
         }
     }
