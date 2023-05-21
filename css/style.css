@@ -381,7 +381,12 @@ p {
   .titulos-inicio h4 {
     font-size: 30px; }
   .titulos-inicio p {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .banner {
+    width: 600px !important;
+    height: 300px !important; }
+    .banner .carousel-inner .carousel-item {
+      height: 280px !important; } }
 
 @media (min-width: 412px) and (max-width: 674px) {
   .fondo-tienda .tienda .grid-area-tienda {
@@ -407,7 +412,12 @@ p {
   .titulos-inicio h4 {
     font-size: 22px; }
   .titulos-inicio p {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .banner {
+    width: 400px !important;
+    height: 200px !important; }
+    .banner .carousel-inner .carousel-item {
+      height: 180px !important; } }
 
 @media (min-width: 280px) and (max-width: 411px) {
   .fondo-tienda .tienda .grid-area-tienda {
@@ -441,4 +451,9 @@ p {
   .titulos-inicio h4 {
     font-size: 18px; }
   .titulos-inicio p {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .banner {
+    width: 250px !important;
+    height: 125px !important; }
+    .banner .carousel-inner .carousel-item {
+      height: 115px !important; } }
